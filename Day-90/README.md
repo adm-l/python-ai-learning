@@ -34,6 +34,16 @@ curl -X POST http://127.0.0.1:8000/orders \\
 curl http://127.0.0.1:8000/orders/1
 ```
 
+## Run with Docker Compose
+
+```bash
+docker compose up --build
+curl http://127.0.0.1:8000/health/ready
+docker compose down
+```
+
+The named volume preserves the SQLite database between container restarts. This single-container setup is a learning deployment, not a horizontally scalable production topology.
+
 ## Important design decisions
 - The service uses parameterized SQL and database constraints.
 - A single transaction writes the order, idempotency record and outbox event.
