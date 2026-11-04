@@ -1,15 +1,4 @@
-# Day 49 example
-
-Run with Python 3.12 unless the lesson states otherwise:
-
-```bash
-python async_tasks.py
-```
-
-This is a focused teaching example, not a complete production service.
-
-```python
-"""Concurrent I/O-shaped tasks; no real network access required."""
+"""Concurrent simulated I/O tasks."""
 import asyncio
 
 
@@ -29,4 +18,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-```
