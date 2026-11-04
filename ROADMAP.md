@@ -1,8 +1,10 @@
-# Comprehensive 180-Day Python, Backend, AI Engineering and Architecture Roadmap
+# 180-Day Python Mastery and AI Engineering Roadmap
 
-This is a long-form mastery programme, not a promise that 180 calendar days alone makes someone a senior engineer. Suggested pace: 1–2 focused hours daily; spend more time on projects and topics that need repetition.
+This programme is deliberately focused on **Python**: the language, its runtime, standard library, ecosystem, engineering practices and Python libraries used in data science and AI. It does not include Linux, Docker, Kubernetes, cloud infrastructure or DevOps as curriculum topics.
 
-The programme progresses from Python foundations to professional software engineering, backend/distributed systems, AI/LLM engineering, and production architecture. Every stage should include explanations, runnable examples, exercises, tests, debugging practice, and a project.
+The goal is to progress from Python fundamentals to advanced Python engineering and then Python-based AI application development. This is a learning plan, not a guarantee that 180 calendar days alone makes someone a senior engineer. Suggested pace: 1–2 focused hours daily, with extra time for projects and difficult concepts.
+
+Every stage should include detailed explanations, runnable examples, exercises, tests, debugging practice and a practical project.
 
 ## Stage 1 — Python foundations (Days 01–15)
 01 Environment, interpreter, names, variables and primitive types
@@ -55,185 +57,186 @@ The programme progresses from Python foundations to professional software engine
 44 Caching, resource bounds and backpressure
 45 Project: profile and optimize a Python application
 
-## Stage 4 — Concurrency, networking and reliability (Days 46–60)
-46 Async I/O, event loop, coroutines and await
-47 asyncio tasks, task groups, cancellation and timeouts
-48 Async generators, queues, semaphores and synchronization
-49 Threads, locks, thread pools and thread safety
-50 Multiprocessing, process pools and IPC
-51 Concurrency vs parallelism; choosing an execution model
-52 Sockets, DNS, TCP and connection lifecycle
-53 HTTP/1.1, HTTP/2, TLS and connection pooling
-54 WebSockets, server-sent events and streaming
-55 Timeouts, retries, exponential backoff and jitter
-56 Circuit breakers, bulkheads and rate limiting
-57 Idempotency, deduplication and graceful degradation
-58 Graceful shutdown, signals and resource lifecycle
-59 Load testing, bottlenecks and capacity estimation
-60 Project: resilient concurrent service monitor
+## Stage 4 — Python concurrency, networking and reliability (Days 46–60)
+46 Concurrency models and choosing the right execution model
+47 Threading, locks and shared state
+48 Multiprocessing and process pools
+49 asyncio event loop, coroutines and tasks
+50 asyncio synchronization, queues and bounded workers
+51 Async HTTP clients and network I/O
+52 Async generators and streaming
+53 Python socket programming and networking fundamentals
+54 HTTP resilience, timeouts, retries and rate limits
+55 Queues, job processing and idempotency
+56 Deadlines, bulkheads and graceful shutdown
+57 Structured logging and Python observability libraries
+58 Performance testing and latency percentiles
+59 Concurrency testing and debugging
+60 Project: resilient concurrent task runner
 
 ## Stage 5 — Data structures, algorithms and software design (Days 61–75)
 61 Big-O analysis and problem decomposition
 62 Arrays, strings, hash maps and sets
-63 Stacks, queues, linked lists and deques
-64 Trees, binary search trees and heaps
-65 Graphs, traversal, BFS and DFS
-66 Sorting, searching and selection algorithms
-67 Recursion, backtracking and dynamic programming
-68 Practical data structures in Python
-69 Functional programming concepts and immutability
-70 SOLID principles with Python examples
-71 Design patterns: factory, strategy, adapter and decorator
-72 Design patterns: repository, unit of work and observer
-73 Dependency injection and composition roots
-74 Clean architecture, modular monoliths and boundaries
-75 Project: extensible workflow/task processing engine
+63 Dictionaries, sets and hash-table behavior
+64 Stacks, queues, linked lists and deques
+65 Trees, traversal and search
+66 Binary search and sorted data
+67 Sorting algorithms, stability and key functions
+68 Recursion, iteration and backtracking
+69 Graphs, BFS, DFS and topological ordering
+70 Heaps, priority queues and top-k problems
+71 Tries, prefix search and indexing
+72 Dynamic programming and memoization
+73 Pythonic algorithm design, iterators and generators
+74 Software design principles, protocols and composition
+75 Project: algorithm toolkit and benchmark suite
 
-## Stage 6 — Backend, databases and data engineering (Days 76–90)
-76 FastAPI application structure and request lifecycle
-77 Pydantic models, validation and serialization
-78 Dependency injection, middleware and application lifespan
-79 REST API design, pagination, filtering and versioning
-80 Authentication, authorization, OAuth2 and JWT
-81 API security: validation, CORS, CSRF and injection risks
-82 PostgreSQL schema design, constraints and normalization
-83 SQL joins, indexes, EXPLAIN and query optimization
-84 Transactions, isolation, locks and deadlocks
-85 SQLAlchemy, migrations and connection pools
-86 Redis data structures, caching and rate limiting
-87 Kafka fundamentals, partitions, offsets and consumer groups
-88 Outbox/inbox, idempotent consumers and delivery semantics
-89 Background jobs, scheduling and worker architecture
-90 Project: production-style document ingestion API
+## Stage 6 — Python application and backend development (Days 76–90)
+76 Backend architecture and Python request lifecycle
+77 HTTP fundamentals and API contract design
+78 FastAPI fundamentals and dependency injection
+79 FastAPI asynchronous behavior and application lifecycle
+80 API validation, errors and versioning
+81 Relational database fundamentals and SQL
+82 PostgreSQL transactions and isolation
+83 Python database access and repository patterns
+84 Redis Python client, caching and data structures
+85 Rate limiting and coordination patterns in Python applications
+86 Message queues and event-driven application patterns
+87 Kafka Python client concepts, partitions and consumer groups
+88 Outbox, inbox and idempotency patterns
+89 Python API security and application hardening
+90 Project: production-style Python order API
 
-## Stage 7 — Production engineering, cloud and distributed systems (Days 91–105)
-91 Linux process, filesystem, permissions and signals
-92 Shell scripting and Python automation
-93 Processes, containers, namespaces and cgroups
-94 Docker images, layers, volumes and networking
-95 Docker Compose for local multi-service systems
-96 Kubernetes architecture, pods, deployments and services
-97 Kubernetes configuration, secrets and probes
-98 Cloud fundamentals: compute, storage, networking and IAM
-99 AWS core services and Python SDK usage
-100 CI/CD concepts and safe release strategies
-101 Configuration, secret management and environment separation
-102 Structured logging, correlation IDs and log aggregation
-103 Metrics, tracing, OpenTelemetry and service dashboards
-104 SLI, SLO, error budgets and incident response
-105 Project: containerized observable API with deployment runbook
+## Stage 7 — Advanced Python internals (Days 91–105)
+91 Python data model and special methods
+92 Object lifecycle, allocation and identity
+93 Reference counting and cyclic garbage collection in depth
+94 Attribute lookup, `__getattribute__` and `__getattr__`
+95 Descriptors: data descriptors, non-data descriptors and binding
+96 MRO, C3 linearization and multiple inheritance
+97 Metaclasses and the class creation protocol
+98 Advanced decorators: functions, classes and decorator factories
+99 Iterator and generator protocol internals
+100 Context manager protocol and resource lifecycle
+101 Import machinery, finders, loaders and module caching
+102 CPython bytecode, frames and execution model
+103 GIL, free-threaded Python and practical concurrency implications
+104 Memory profiling, allocation tracing and performance diagnosis
+105 Project: build a Python object and runtime inspection toolkit
 
-## Stage 8 — Security, quality and advanced engineering practices (Days 106–120)
-106 Threat modeling and security boundaries
-107 OWASP Top 10 and secure coding in Python
-108 Password hashing, secrets and key management
-109 TLS, certificates and secure service-to-service communication
-110 Input validation, output encoding and injection prevention
-111 SSRF, path traversal, deserialization and file upload safety
-112 Authentication sessions, tokens, rotation and revocation
-113 Authorization models: RBAC, ABAC and tenant isolation
-114 Dependency and supply-chain security
-115 Secure configuration, audit logs and data privacy
-116 Advanced pytest: fixtures, parametrization and plugins
-117 Property-based testing and fuzz testing concepts
-118 Contract, integration, end-to-end and load testing
-119 Static analysis, type checking and code review practice
-120 Project: security-reviewed multi-tenant API
+## Stage 8 — Advanced language features and Python library engineering (Days 106–120)
+106 Modern type system: annotations and static type checking
+107 Generics, TypeVar, bounds and variance
+108 Protocols, structural subtyping and runtime-checkable protocols
+109 TypedDict, Literal, Final, Required and NotRequired
+110 Callable, ParamSpec, Concatenate and type-safe decorators
+111 Dataclasses, slots, enums and Pydantic model design
+112 Exception hierarchies, exception chaining and custom errors
+113 Functional programming: purity, immutability and composition
+114 Closures, lexical scope and higher-order functions
+115 Dependency injection and inversion of control in Python
+116 Design patterns: strategy, factory, adapter and observer
+117 SOLID and composition applied to Python code
+118 Packaging: pyproject.toml, build backends and dependency metadata
+119 Reusable libraries, CLI design, versioning and documentation
+120 Project: design, package and test a reusable Python library
 
-## Stage 9 — Data science and machine learning foundations (Days 121–135)
-121 NumPy arrays, shapes, dtypes and vectorization
-122 Pandas indexing, joins, groupby and transformations
-123 Data cleaning, missing values and outlier handling
-124 Data formats: CSV, JSON, Parquet and Arrow concepts
-125 Data pipelines, batch processing and incremental loads
-126 Statistics: distributions, mean, variance and sampling
-127 Probability, conditional probability and Bayes' theorem
-128 Linear algebra: vectors, matrices, dot products and norms
-129 Calculus intuition: derivatives and gradients
-130 ML problem types, features, labels and datasets
-131 Regression, classification and loss functions
-132 Train/validation/test splits and cross-validation
-133 Overfitting, regularization and model evaluation
-134 Scikit-learn pipelines and reproducible experiments
-135 Project: tested tabular ML training and inference pipeline
+## Stage 9 — Concurrency internals and performance engineering (Days 121–135)
+121 Thread lifecycle, scheduling and thread-safety boundaries
+122 Locks, RLock, Condition, Event and Semaphore
+123 Multiprocessing start methods and process lifecycle
+124 Process pools, IPC, queues and shared memory
+125 asyncio event loop internals and scheduling
+126 Coroutines, awaitables, Futures and Tasks
+127 Cancellation propagation, timeouts and cleanup
+128 TaskGroup and structured concurrency
+129 Async generators, backpressure and streaming pipelines
+130 Async context managers and resource cleanup
+131 Comparing threads, processes and asyncio with experiments
+132 CPU-bound versus I/O-bound workloads and optimization choices
+133 Profiling and benchmarking with cProfile, timeit and pyinstrument
+134 Memory-efficient programming, generators and allocation reduction
+135 Project: concurrent, bounded Python data-processing engine
 
-## Stage 10 — LLM and generative AI engineering (Days 136–150)
-136 AI application architecture and model boundaries
-137 Neural network fundamentals and training vs inference
-138 Tokenization, token IDs and token budgets
-139 Embeddings, vector spaces and similarity metrics
-140 Transformer architecture and positional information
-141 Self-attention, multi-head attention and feed-forward layers
-142 Context windows, KV cache and inference lifecycle
-143 Hosted and local LLM APIs; Ollama integration
-144 Prompt roles, instruction hierarchy and prompt versioning
-145 Structured outputs, JSON schemas and validation
-146 Tool/function calling and safe execution boundaries
-147 Streaming, retries, timeouts and model fallbacks
-148 Model selection, quantization and hardware constraints
-149 Evaluation, hallucinations, grounding and safety
-150 Project: reliable LLM-backed application with evaluation
+## Stage 10 — Python architecture, testing and engineering quality (Days 136–150)
+136 Clean architecture and dependency direction in Python
+137 Modular design, package boundaries and cohesive components
+138 Domain modeling and domain-driven design fundamentals
+139 Repository, Unit of Work and service-layer patterns
+140 Dependency injection, composition roots and testability
+141 pytest deeply: fixtures, parametrization, plugins and coverage
+142 Integration testing and testing external boundaries
+143 Mocking, fakes, stubs and test doubles
+144 Property-based testing with Hypothesis
+145 Test-driven development and refactoring safely
+146 Static analysis, linting, formatting and type-checking workflows
+147 Secure Python coding, validation and safe deserialization
+148 Plugin systems, dynamic imports and extensible architectures
+149 Releasing and maintaining high-quality Python packages
+150 Project: build a modular, well-tested Python application
 
-## Stage 11 — RAG, agents and orchestration (Days 151–165)
-151 RAG architecture, ingestion and retrieval lifecycle
-152 Document parsing, normalization and metadata
-153 Chunking strategies and their trade-offs
-154 Embedding models, vector dimensions and indexing
-155 Vector databases, filtering and hybrid retrieval
-156 Retrieval quality: recall, precision and ranking
-157 Reranking and cross-encoder models
-158 Grounded generation, citations and abstention
-159 RAG evaluation datasets and metrics
-160 Agent vs workflow; when autonomy is justified
-161 Agent loop: observe, decide, act and verify
-162 Tool design, permissions and execution isolation
-163 MCP: tools, resources, prompts, clients and transports
-164 LangGraph: state, nodes, edges, routing and checkpoints
-165 Project: stateful RAG assistant with tools and evaluation
+## Stage 11 — Python for data science and machine learning (Days 151–165)
+151 NumPy arrays, shapes, dtypes and vectorization
+152 Broadcasting, indexing, views, copies and numerical operations
+153 Pandas Series, DataFrames and indexing
+154 Data cleaning, joins, groupby and transformations
+155 Polars and efficient columnar data processing
+156 Statistics: distributions, central tendency, variance and sampling
+157 Probability, conditional probability and Bayes' theorem
+158 Linear algebra for ML: vectors, matrices, dot products and norms
+159 Calculus intuition: derivatives, gradients and optimization
+160 Machine-learning problem types, features, labels and datasets
+161 Regression, classification and common algorithms
+162 Clustering and unsupervised learning
+163 Train/validation/test splits, cross-validation and evaluation metrics
+164 Scikit-learn pipelines, preprocessing and model serialization
+165 Project: end-to-end tabular machine-learning application
 
-## Stage 12 — Advanced agent systems and architecture capstone (Days 166–180)
-166 Agent state, persistence and checkpoint recovery
-167 Planning, task decomposition and result synthesis
-168 Short-term, long-term and episodic memory engineering
-169 Human-in-the-loop approvals and sensitive actions
-170 Prompt injection, tool abuse and agent guardrails
-171 Multi-agent patterns, delegation and coordination
-172 Agent evaluation, regression tests and simulation
-173 Agent observability: traces, tool calls, tokens and cost
-174 Queues, workers, concurrency and agent scaling
-175 Failure recovery, retries, idempotency and compensating actions
-176 Multi-tenant AI services, quotas and data isolation
-177 Architecture design: requirements, HLD, LLD and trade-offs
-178 Production readiness: threat model, SLOs, runbooks and rollback
-179 Capstone design review and failure-mode analysis
-180 Capstone: production-oriented DevOps investigation agent
+## Stage 12 — Python AI and LLM engineering (Days 166–180)
+166 LLM architecture, neural networks and transformer foundations
+167 Tokenization, token IDs, vocabularies and token budgets
+168 Embeddings, vector representations and similarity
+169 Hugging Face Transformers and model inference from Python
+170 Running local LLMs with Ollama and Python clients
+171 Hosted and local LLM API integration, structured outputs and validation
+172 Prompt design, context windows and conversation management
+173 Vector search, vector databases and retrieval from Python
+174 RAG architecture: ingestion, chunking, retrieval and generation
+175 Reranking, cross-encoders and retrieval evaluation
+176 LLM evaluation, hallucinations, grounding and guardrails
+177 MCP server and client development using Python
+178 LangGraph: state, nodes, edges, routing and checkpoints
+179 Multi-tool and multi-agent systems, coordination and evaluation
+180 Capstone: build and defend a production-oriented Python AI agent
 
-## Topics that continue throughout the programme
-- Readable, maintainable Python; API and data contract design
-- Documentation, diagrams, code review and technical communication
-- Git, branching, commits, pull requests and release management
-- Debugging from logs, traces, metrics and reproducible failures
-- Cost, latency, throughput, memory and operational trade-offs
-- Architecture decision records and explaining why an approach was selected
+## Learning method for every day
+Each daily lesson should include:
+1. A clear explanation from fundamentals, including why the concept exists.
+2. Internals: what Python or the relevant library is doing behind the scenes.
+3. Complete runnable examples with expected behavior.
+4. Exercises that require independent implementation.
+5. Tests using pytest where appropriate.
+6. Real-world use cases, limitations and trade-offs.
+7. A short recap and questions to check understanding.
 
-## Required deliverables for every substantial project
-Requirements and non-goals; component and data-flow diagrams; API and data contracts; clean project structure; runnable implementation; unit and integration tests; failure-mode analysis; security considerations; structured logs, metrics, traces and health checks; Docker setup where appropriate; installation and operation documentation; and explicit trade-off records.
+Major projects should include a clear package structure, documented setup, requirements and non-goals, tests, error handling, security considerations and design decisions. Use external services or databases only when they help teach Python application development; they are not separate infrastructure curriculum.
 
 ## Milestones
-- Day 15: confidently use Python fundamentals and build a tested CLI.
-- Day 30: deliver a typed, tested, installable package.
+- Day 15: use Python fundamentals confidently and build a tested CLI.
+- Day 30: deliver a typed, tested and installable Python package.
 - Day 45: explain Python runtime and object-model behavior.
 - Day 60: choose appropriately between async, threads and processes.
 - Day 75: apply algorithms and software design principles.
-- Day 90: deliver a persistent backend API with database and messaging concepts.
-- Day 105: deploy and operate an observable service.
-- Day 120: build and test a secure multi-tenant API.
-- Day 135: explain ML fundamentals and build a reproducible ML pipeline.
-- Day 150: build and evaluate an LLM application.
-- Day 165: build a stateful RAG and tool-using workflow.
-- Day 180: deliver and defend a production-oriented agent architecture.
+- Day 90: deliver a Python backend application with persistence and clear boundaries.
+- Day 105: explain advanced Python internals and inspect runtime behavior.
+- Day 120: build and distribute a reusable Python library.
+- Day 135: understand Python concurrency and optimize measured bottlenecks.
+- Day 150: design and test a modular Python application.
+- Day 165: build a reproducible machine-learning application.
+- Day 180: build and evaluate a Python-based AI agent.
 
 ## Important learning rule
-A day is complete only when the learner can explain the concept, run and modify the example, solve the exercises without copying, write tests, debug a failure, and explain the design trade-offs. Reading a lesson is not completion.
+A day is complete only when the learner can explain the concept, run and modify the example, solve the exercises without copying, write tests, debug a failure and explain the trade-offs. Reading a lesson is not completion.
 
-The 180-day roadmap is the master syllabus. Individual daily lesson folders, runnable code, exercises, solutions, tests and project implementations must be developed progressively; do not assume they all exist just because a topic appears here.
+The roadmap is the master syllabus. Individual daily lesson folders, runnable code, exercises, tests and project implementations must be developed progressively; do not assume they all exist just because a topic appears here.
