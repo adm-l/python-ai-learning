@@ -1,15 +1,4 @@
-# Day 48 example
-
-Run with Python 3.12 unless the lesson states otherwise:
-
-```bash
-python process_pool.py
-```
-
-This is a focused teaching example, not a complete production service.
-
-```python
-"""CPU work in separate processes; keep process entry guarded."""
+"""CPU work in separate processes; guard the process entry point."""
 from concurrent.futures import ProcessPoolExecutor
 
 
@@ -22,11 +11,9 @@ def count_primes(limit: int) -> int:
 
 
 def main() -> None:
-    limits = [20_000, 21_000, 22_000, 23_000]
     with ProcessPoolExecutor() as pool:
-        print(list(pool.map(count_primes, limits)))
+        print(list(pool.map(count_primes, [20_000, 21_000, 22_000, 23_000])))
 
 
 if __name__ == "__main__":
     main()
-```
