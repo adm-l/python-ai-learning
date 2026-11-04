@@ -30,7 +30,7 @@ def create_app(database_path: str | None = None) -> FastAPI:
     @application.get("/health/ready")
     def ready(request: Request) -> dict[str, str]:
         try:
-            with request.app.state.database.connect() as connection:
+            with request.app.state.database.session() as connection:
                 connection.execute("SELECT 1")
         except Exception as exc:
             raise HTTPException(status_code=503, detail="database unavailable") from exc
@@ -43,14 +43,14 @@ def create_app(database_path: str | None = None) -> FastAPI:
         idempotency_key: str = Header(min_length=8, max_length=128, alias="Idempotency-Key"),
     ) -> dict:
         try:
-            with request.app.state.database.connect() as connection:
+            with request.app.state.database.session() as connection:
                 return create_order(connection, payload.customer_id, payload.total_cents, idempotency_key)
         except IdempotencyConflict as exc:
             raise HTTPException(status_code=409, detail=str(exc)) from exc
 
     @application.get("/orders/{order_id}")
     def get_order(order_id: int, request: Request) -> dict:
-        with request.app.state.database.connect() as connection:
+        with request.app.state.database.session() as connection:
             row = connection.execute("SELECT * FROM orders WHERE id = ?", (order_id,)).fetchone()
         if row is None:
             raise HTTPException(status_code=404, detail="order not found")
