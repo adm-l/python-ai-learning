@@ -1,14 +1,3 @@
-# Day 50 example
-
-Run with Python 3.12 unless the lesson states otherwise:
-
-```bash
-python bounded_async_workers.py
-```
-
-This is a focused teaching example, not a complete production service.
-
-```python
 """Bounded asyncio queue and worker pool (Python 3.11+)."""
 import asyncio
 
@@ -38,4 +27,3 @@ async def main() -> None:
 
 if __name__ == "__main__":
     asyncio.run(main())
-```
