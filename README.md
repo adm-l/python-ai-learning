@@ -1,6 +1,8 @@
 # Python AI Engineering Mastery
 
-A practical **180-day curriculum** progressing from Python fundamentals to professional backend engineering, distributed systems, machine learning, LLM/RAG engineering and production agent architecture.
+A practical **180-day Python-only curriculum** progressing from Python fundamentals to advanced Python engineering, data science, machine learning and AI/LLM application development.
+
+The focus is Python language mastery, runtime internals, standard library, Python ecosystem and building applications with Python. This curriculum does **not** include Linux, Docker, Kubernetes, cloud infrastructure or DevOps as study phases.
 
 This is a long-form learning programme, not a promise that completing a calendar schedule alone makes someone a senior engineer. Every milestone requires implementation, testing, debugging and the ability to explain trade-offs.
 
@@ -27,15 +29,15 @@ python Day-01/examples/variables.py
 - Days 01–15: Python foundations
 - Days 16–30: Professional Python, typing, testing, packaging and design
 - Days 31–45: Python runtime, object model, memory, interpreter and profiling
-- Days 46–60: Concurrency, networking, reliability and performance
-- Days 61–75: Algorithms, data structures and software design
-- Days 76–90: Backend, APIs, databases, Redis and Kafka
-- Days 91–105: Linux, Docker, Kubernetes, cloud and observability
-- Days 106–120: Security, testing strategy and engineering quality
-- Days 121–135: Data engineering, statistics and ML foundations
-- Days 136–150: LLMs, transformers, tokenization and AI application engineering
-- Days 151–165: RAG, retrieval evaluation, MCP and LangGraph
-- Days 166–180: Advanced agents, production architecture and capstone
+- Days 46–60: Python concurrency, networking, reliability and performance
+- Days 61–75: Algorithms, data structures and software design in Python
+- Days 76–90: Python backend development, APIs, databases and Python client libraries
+- Days 91–105: Advanced Python internals and object model
+- Days 106–120: Advanced typing, metaprogramming, packaging and reusable libraries
+- Days 121–135: Concurrency internals, asyncio and Python performance
+- Days 136–150: Python architecture, testing and professional engineering
+- Days 151–165: NumPy, Pandas, statistics and machine learning
+- Days 166–180: Python AI engineering, LLMs, RAG, MCP and LangGraph
 
 See [ROADMAP.md](ROADMAP.md) for the full day-by-day syllabus.
 
@@ -60,8 +62,8 @@ See [ROADMAP.md](ROADMAP.md) for the full day-by-day syllabus.
 
 ## Project quality bar
 
-Substantial projects should include requirements and non-goals, a clear package structure, API/data contracts, unit and integration tests, failure-mode analysis, security considerations, structured logs, metrics/traces where appropriate, reproducible setup, operational documentation and explicit trade-off records.
+Substantial projects should include requirements and non-goals, a clear package structure, API/data contracts where relevant, unit and integration tests, failure-mode analysis, security considerations, structured logs and metrics where appropriate, reproducible setup, documentation and explicit trade-off records.
 
 No GitHub Actions workflow is required for this learning repository. Local tests and manual review are part of the learning workflow.
 
-Finishing a syllabus does not automatically make someone a senior architect. Senior ability comes from repeated implementation, debugging, code review, operational ownership and explaining trade-offs.
+Finishing a syllabus does not automatically make someone a senior architect. Senior ability comes from repeated implementation, debugging, code review, ownership and explaining trade-offs.
