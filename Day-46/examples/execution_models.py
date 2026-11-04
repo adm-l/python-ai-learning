@@ -1,15 +1,4 @@
-# Day 46 example
-
-Run with Python 3.12 unless the lesson states otherwise:
-
-```bash
-python execution_models.py
-```
-
-This is a focused teaching example, not a complete production service.
-
-```python
-"""Compare sequential, threaded and process execution for a CPU workload."""
+"""Compare sequential, threaded and process execution for CPU work."""
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
 from time import perf_counter
 
@@ -22,9 +11,9 @@ def cpu_work(n: int) -> int:
 
 
 def measure(label: str, operation) -> None:
-    started = perf_counter()
-    results = operation()
-    print(f"{label:12} {perf_counter() - started:.3f}s checksum={sum(results)}")
+    start = perf_counter()
+    result = operation()
+    print(f"{label:12} {perf_counter() - start:.3f}s checksum={sum(result)}")
 
 
 def main() -> None:
@@ -38,4 +27,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-```
